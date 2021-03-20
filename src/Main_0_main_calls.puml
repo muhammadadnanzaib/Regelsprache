@@ -1,0 +1,406 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "Main#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "Main"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1377896460 { 
+   	label=InfixEvaluation
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_513911254 { 
+   	label=InfixEvaluation
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InfixEvaluation1377896460XXXevaluate1839184593[
+	label="+ evaluate()"
+	style=filled
+	fillcolor=white
+	tooltip="InfixEvaluation
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1900232647 { 
+   	label=InfixPreparation
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_2131588338 { 
+   	label=InfixPreparation
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InfixPreparation1900232647XXXprepare1918363931[
+	label="+ prepare()"
+	style=filled
+	fillcolor=white
+	tooltip="InfixPreparation
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1706522830 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main2390489XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_244669418 { 
+   	label=VariableValidator
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1104105534 { 
+   	label=VariableValidator
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   VariableValidator244669418XXXparseAssigment1808118735[
+	label="+ parseAssigment()"
+	style=filled
+	fillcolor=white
+	tooltip="VariableValidator
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_803312558 { 
+   	label=ReadFile
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_558607982 { 
+   	label=ReadFile
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ReadFile803312558XXXread0[
+	label="+ read()"
+	style=filled
+	fillcolor=white
+	tooltip="ReadFile
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_82059409 { 
+   	label=Utils
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_619266828 { 
+   	label=Utils
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Utils82059409XXXaddition2013066710[
+	label="+ addition()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXcontainsAllKeys1621014032[
+	label="+ containsAllKeys()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXdivision2013066710[
+	label="+ division()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXgetVariableList1839184593[
+	label="+ getVariableList()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXisDoubleQuotedString1808118735[
+	label="+ isDoubleQuotedString()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXisNumericValue1808118735[
+	label="+ isNumericValue()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXisOperator1808118735[
+	label="+ isOperator()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXisSingleQuotedString1808118735[
+	label="+ isSingleQuotedString()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXmultiply2013066710[
+	label="+ multiply()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXreplaceNumberFormat1839184593[
+	label="+ replaceNumberFormat()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXreplaceVariableNameByValue1840348062[
+	label="+ replaceVariableNameByValue()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXstartsWithLetter1808118735[
+	label="+ startsWithLetter()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXsubtraction2013066710[
+	label="+ subtraction()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+
+Utils82059409XXXtrimQuotes1808118735[
+	label="+ trimQuotes()"
+	style=filled
+	fillcolor=white
+	tooltip="Utils
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_941567971 { 
+   	label=InfixProcessing
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1865017384 { 
+   	label=InfixProcessing
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InfixProcessing941567971XXXprocess1918363931[
+	label="+ process()"
+	style=filled
+	fillcolor=white
+	tooltip="InfixProcessing
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXaddition2013066710;
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXdivision2013066710;
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXisNumericValue1808118735;
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXisOperator1808118735;
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXmultiply2013066710;
+InfixEvaluation1377896460XXXevaluate1839184593 -> Utils82059409XXXsubtraction2013066710;
+InfixPreparation1900232647XXXprepare1918363931 -> Utils82059409XXXcontainsAllKeys1621014032;
+InfixPreparation1900232647XXXprepare1918363931 -> Utils82059409XXXgetVariableList1839184593;
+InfixPreparation1900232647XXXprepare1918363931 -> Utils82059409XXXreplaceNumberFormat1839184593;
+InfixPreparation1900232647XXXprepare1918363931 -> Utils82059409XXXreplaceVariableNameByValue1840348062;
+InfixProcessing941567971XXXprocess1918363931 -> InfixEvaluation1377896460XXXevaluate1839184593;
+InfixProcessing941567971XXXprocess1918363931 -> InfixPreparation1900232647XXXprepare1918363931;
+Main2390489XXXmain1859653459 -> InfixProcessing941567971XXXprocess1918363931;
+Main2390489XXXmain1859653459 -> ReadFile803312558XXXread0;
+ReadFile803312558XXXread0 -> VariableValidator244669418XXXparseAssigment1808118735;
+VariableValidator244669418XXXparseAssigment1808118735 -> Utils82059409XXXisDoubleQuotedString1808118735;
+VariableValidator244669418XXXparseAssigment1808118735 -> Utils82059409XXXisNumericValue1808118735;
+VariableValidator244669418XXXparseAssigment1808118735 -> Utils82059409XXXisSingleQuotedString1808118735;
+VariableValidator244669418XXXparseAssigment1808118735 -> Utils82059409XXXstartsWithLetter1808118735;
+VariableValidator244669418XXXparseAssigment1808118735 -> Utils82059409XXXtrimQuotes1808118735;
+    
+}
+@enduml
